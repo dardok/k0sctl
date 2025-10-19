@@ -11,14 +11,14 @@ import (
 )
 
 // BaseLinux for tricking go interfaces
-type BaseLinux struct {
+type BaseLinux2 struct {
 	configurer.Linux
 }
 
 // Gentoo provides OS support for Gentoo Linux
 type Gentoo struct {
 	os.Linux
-	BaseLinux
+	BaseLinux2
 }
 
 func init() {
