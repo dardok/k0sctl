@@ -34,7 +34,7 @@ func init() {
 
 // InstallPackage installs packages via slackpkg
 func (l *Gentoo) InstallPackage(h os.Host, pkg ...string) error {
-	return h.Execf("emerge %s", strings.Join(pkg, " "), exec.Sudo(h))
+	return h.Execf("emerge --noreplace %s", strings.Join(pkg, " "), exec.Sudo(h))
 }
 
 func (l *Gentoo) Prepare(h os.Host) error {
